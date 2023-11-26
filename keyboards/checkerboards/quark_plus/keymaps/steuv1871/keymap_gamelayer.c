@@ -102,10 +102,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
-// // Defines for task manager and such
-// #define CALTDEL LCTL(LALT(KC_DEL))
-// #define TSKMGR LCTL(LSFT(KC_ESC))
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Azerty
@@ -202,13 +198,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Rotary Encoder action definition per layer
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    // [_AZERTY] = { ENCODER_CCW_CW(KC_MS_WH_DOWN, KC_MS_WH_UP), ENCODER_CCW_CW(KC_O, KC_P) },
-    // [_LOWER]  = { ENCODER_CCW_CW(ALTAB, SALTAB), ENCODER_CCW_CW(KC_B, KC_N) },
-    // [_RAISE]  = { ENCODER_CCW_CW(C(KC_RGHT), C(KC_LEFT)), ENCODER_CCW_CW(KC_B, KC_N) },
-    // [_FUNC]   = { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD), ENCODER_CCW_CW(KC_B, KC_N) },
-    // [_GAME]   = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD), ENCODER_CCW_CW(KC_B, KC_N) },
-
-    // With 2 encoders
     [_AZERTY] = { ENCODER_CCW_CW(KC_MS_WH_DOWN, KC_MS_WH_UP), ENCODER_CCW_CW(KC_HOME, KC_END) },
     [_LOWER]  = { ENCODER_CCW_CW(KC_DOWN, KC_UP), ENCODER_CCW_CW(SALTAB, ALTAB) },
     [_RAISE]  = { ENCODER_CCW_CW(KC_PGDN, KC_PGUP), ENCODER_CCW_CW(C(KC_LEFT), C(KC_RGHT)) },
